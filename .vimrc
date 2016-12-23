@@ -1,3 +1,7 @@
+
+" change leader key to , (from \)
+let mapleader=","
+
 set autoindent
 set smartindent
 
@@ -45,3 +49,9 @@ nnoremap E $
 nnoremap $ <nop>
 nnoremap ^ <nop>
 
+" helpful for nerdcommenter plugin - figures out the appropriate comment type
+filetype plugin on
+
+call plug#begin()
+Plug 'scrooloose/nerdcommenter' "https://github.com/scrooloose/nerdcommenter
+call plug#end()
