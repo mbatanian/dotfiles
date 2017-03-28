@@ -11,10 +11,11 @@ set shiftwidth=4
 set showmatch	" highlight matching [{()}]
 set incsearch	" search as characters are entered
 set hlsearch	" highlight matches
+nnoremap <silent> <CR> :noh<CR><CR> " unhighlight current match after pressing 'enter'
 
 set cursorline	" highlight current line
 hi CursorLine cterm=NONE ctermbg=darkred ctermfg=white
-hi Search cterm=NONE ctermbg=grey ctermfg=white
+hi Search cterm=NONE ctermbg=73 ctermfg=white
 
 " disable beeping
 set vb t_vb=
