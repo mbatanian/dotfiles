@@ -55,4 +55,9 @@ filetype plugin on
 
 call plug#begin()
 Plug 'scrooloose/nerdcommenter' "https://github.com/scrooloose/nerdcommenter
+Plug 'vim-airline/vim-airline' "https://github.com/vim-airline/vim-airline
 call plug#end()
+
+set laststatus=2
+" if we're using airline, we don't need to display the current mode anymore
+set noshowmode
