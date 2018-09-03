@@ -56,7 +56,28 @@ filetype plugin on
 call plug#begin()
 Plug 'scrooloose/nerdcommenter' "https://github.com/scrooloose/nerdcommenter
 Plug 'vim-airline/vim-airline' "https://github.com/vim-airline/vim-airline
+Plug 'junegunn/goyo.vim' "https://github.com/junegunn/goyo.vim
 call plug#end()
+
+" goyo enter/leave settings
+function! s:goyo_enter()
+	highlight Normal ctermbg=Gray
+	highlight Normal ctermfg=Black
+	set cursorline!
+	set wrap
+	set linebreak
+endfunction
+function! s:goyo_leave()
+	set cursorline " highlight current line
+	hi CursorLine cterm=NONE ctermbg=darkred ctermfg=white
+	hi Search cterm=NONE ctermbg=73 ctermfg=white
+endfunction
+autocmd! User GoyoEnter nested call <SID>goyo_enter()
+autocmd! User GoyoLeave nested call <SID>goyo_leave()
+
+" ProseMode, adapted from https://statico.github.io/vim3.html
+command! ProseMode call goyo#execute(0, [])
+nmap <Leader>p :ProseMode<CR>
 
 set laststatus=2
 " if we're using airline, we don't need to display the current mode anymore
