@@ -14,7 +14,7 @@ set hlsearch	" highlight matches
 nnoremap <silent> <CR> :noh<CR><CR> " unhighlight current match after pressing 'enter'
 
 set cursorline	" highlight current line
-hi CursorLine cterm=NONE ctermbg=darkred ctermfg=white
+hi CursorLine cterm=NONE ctermbg=darkred ctermfg=black
 hi Search cterm=NONE ctermbg=73 ctermfg=white
 
 " disable beeping
@@ -57,6 +57,7 @@ call plug#begin()
 Plug 'scrooloose/nerdcommenter' "https://github.com/scrooloose/nerdcommenter
 Plug 'vim-airline/vim-airline' "https://github.com/vim-airline/vim-airline
 Plug 'junegunn/goyo.vim' "https://github.com/junegunn/goyo.vim
+Plug 'masukomi/vim-markdown-folding' "https://github.com/masukomi/vim-markdown-folding
 call plug#end()
 
 " goyo enter/leave settings
