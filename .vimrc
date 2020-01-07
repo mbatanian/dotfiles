@@ -15,6 +15,7 @@ nnoremap <silent> <CR> :noh<CR><CR> " unhighlight current match after pressing '
 
 set cursorline	" highlight current line
 hi CursorLine cterm=NONE ctermbg=darkred ctermfg=black
+hi CursorLineNr cterm=NONE ctermbg=darkred ctermfg=black
 hi Search cterm=NONE ctermbg=73 ctermfg=white
 
 " disable beeping
