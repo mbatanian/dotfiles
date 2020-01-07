@@ -58,6 +58,7 @@ Plug 'scrooloose/nerdcommenter' "https://github.com/scrooloose/nerdcommenter
 Plug 'vim-airline/vim-airline' "https://github.com/vim-airline/vim-airline
 Plug 'junegunn/goyo.vim' "https://github.com/junegunn/goyo.vim
 Plug 'masukomi/vim-markdown-folding' "https://github.com/masukomi/vim-markdown-folding
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' } "https://github.com/fatih/vim-go
 call plug#end()
 
 " goyo enter/leave settings
